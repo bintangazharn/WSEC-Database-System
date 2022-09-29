@@ -16,6 +16,9 @@
      * @var $pdo
      */
 
+    $humasJsonRead = file_get_contents('./assets/json/config_humas.json');
+    $humasJsonDecode = json_decode($humasJsonRead, true);
+
     if(isset($_POST['username'])) {
         $username = $_POST['username'];
         $password = $_POST['password'];

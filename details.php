@@ -8,7 +8,8 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <link rel="icon" type="image/x-icon" href="./assets/img/assets/vector.svg">
         <title>Details: Dashboard Alumni WSEC</title>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -300,8 +301,19 @@
                     ?>
                 </div>
                 <div class="col-md-3 col-sm-12 right_container">
-                    <div class=" sticky-top">
-                        chat
+                    <?php include "./sidebar.php" ?>
+
+                    <br/>
+
+                    <div class="sidebar_header">
+                        <span><i class="ri-question-line"></i> Quick Help</span>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body mini_text" style="line-height: 1.65em">
+                            Want to add your own bio or editing your own profile (edit company, name, phone, email, etc)? Contact us via our Humas<br/>
+                            <a href="//wa.me/<?php echo $humasJsonDecode['humasPhone']  ?>" class="btn btn-success button_login"><span><i class="ri-whatsapp-line"></i> <?php echo $humasJsonDecode['humasName']  ?></span></a>
+                        </div>
                     </div>
                 </div>
             </div>

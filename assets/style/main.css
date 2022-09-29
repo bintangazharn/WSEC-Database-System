@@ -1,0 +1,128 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Header */
+.nav_menu_top {
+    padding: 0.25em 0.5em;
+    background-color: #0D6EFD!important;
+}
+.bg-light{}
+
+.nav_menu_top .nav-link {
+    font-size: 1em;
+    color:#F1F1F1!important;
+    display: inline-flex;
+    align-items: center;
+}
+.nav_menu_top .nav-link i {
+    font-size: 1.25em;
+}
+
+/* Container */
+.left_container, .right_container {
+    padding: 0.75em 1.5em!important;
+}
+.database_wrapper {
+    margin-bottom: 1.75em;
+}
+.details_wrapper .list-group-item {
+    font-size: 0.9em;
+}
+.details_wrapper img {
+    max-height: 15em;
+    min-width: 13.5em;
+    object-fit: cover;
+    object-position: center;
+}
+.details_wrapper .list_bio {
+    margin-top: 1em!important;
+}
+.details_wrapper .list_bio .profile_title {
+    font-size: 1.25em;
+    border-bottom: #DFDFDF solid 1px;
+    padding-bottom: 0.25em;
+    margin-bottom: 0.75em;
+}
+.notifier_top {
+    margin: 0.5em 0 1em 0;
+    font-size: 0.9em;
+}
+.edit_bar {
+    margin-top: 1.5em;
+}
+
+/* Accessories */
+.button_login i {
+    margin-right: 0.75em;
+    font-size: 1em;
+}
+.button_login span {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.9em;
+}
+.title_header span {
+    display: inline-flex;
+    align-items: center;
+    font-size: 1.15em;
+    color: #ff9800!important;
+    margin-bottom: 0.75em;
+}
+.title_header i {
+    font-size: 1.25em;
+    margin-right: 0.5em;
+}
+.sidebar_header span {
+    display: inline-flex;
+    align-items: center;
+    font-size: 1.15em;
+    color: #4caf50!important;
+    margin-bottom: 0.75em;
+}
+.sidebar_header i {
+    font-size: 1.25em;
+    margin-right: 0.5em;
+}
+.accordion-item .accordion-body {
+    font-size: 0.9em;
+}
+.mini_text {
+    font-size: 0.9em!important;
+}
+.credit_text {
+    margin: 1em 0!important;
+}
+.icon_vertical_center span {
+    display: inline-flex;
+    align-items: center;
+}
+.icon_vertical_center span i {
+    margin-right: 0.5em;
+}.bg_green {
+     background-color: rgba(129, 199, 132, 0.7) !important;
+ }
+.bg_red {
+    background-color: rgba(229, 115, 115, 0.7) !important;
+}
+.link_stylized a {
+    color: #0D6EFD;
+    text-decoration: none!important;
+}
+.link_stylized a:hover {
+    color: #9e9e9e;
+}
+.line_height_custom div {
+    /*line-height: 1.5em;*/
+    margin: 0.25em 0;
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+    .details_wrapper img {
+        margin: 1em 0;
+    }
+    .left_align_forced {
+        text-align: left!important;
+    }
+}

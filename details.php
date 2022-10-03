@@ -1,4 +1,5 @@
 <?php
+    session_start();
     /**
      * @var $connClass
      */
@@ -84,7 +85,7 @@
                                         $email = $_POST['email'];
                                         $bio = $_POST['bio'];
 
-                                        if(is_uploaded_file($_FILES['avatar']['name'])){
+                                        /*if(is_uploaded_file($_FILES['avatar']['name'])){
                                             $avatarExplode = explode(".", $_FILES['avatar']['name']);
                                             $avatarExtension = end($avatarExplode);
                                             $avatarDbUrl = $avatarExplode[0] . '-'. $name .'-' . rand() . '.' . end($avatarExplode);
@@ -99,7 +100,27 @@
                                             }
                                         }
                                         else {
+                                            //$avatarDbUrl = $alumniRow['picture'];
+                                            $avatarDbUrl = 'ya';
+                                        }
+                                        */
+                                        if($_FILES['avatar']['name']==""){
                                             $avatarDbUrl = $alumniRow['picture'];
+                                            echo "";
+                                        }
+                                        else {
+                                            $avatarExplode = explode(".", $_FILES['avatar']['name']);
+                                            $avatarExtension = end($avatarExplode);
+                                            $avatarDbUrl = $avatarExplode[0] . '-'. $name .'-' . rand() . '.' . end($avatarExplode);
+                                            $avatarNewUrl = './assets/img/public/avatar/' . $avatarDbUrl;
+                                            $avatarTemp = $_FILES['avatar']['tmp_name'];
+                                            $avatarAllowedExtension = array('jpg', 'gif', 'png', 'svg');
+
+                                            if(in_array($avatarExtension, $avatarAllowedExtension)){
+                                                if(move_uploaded_file($avatarTemp, $avatarNewUrl)){
+                                                    echo "";
+                                                }
+                                            }
                                         }
 
                                         if($connClass->opQuery(

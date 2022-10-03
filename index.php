@@ -1,4 +1,5 @@
 <?php
+    session_start();
     /**
      * @var $connClass
      */
@@ -63,11 +64,6 @@
                     </div>
 
                     <div>
-                        <?php
-                            if(isset($_POST['searchBox'])){
-                                header("Location: ./search.php?s=".$_POST['searchBox']);
-                            }
-                        ?>
                         <form class="row g-3" method="post">
                             <div class="col">
                                 <label class="visually-hidden">Cari Alumni</label>

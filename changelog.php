@@ -51,7 +51,7 @@ include "./menu.php";
 
                     <div class="card mini_text">
                         <div class="card-body">
-                            <h5 class="card-title">Version 1.1</h5>
+                            <h5 class="card-title">Version 1.1 (28/9/22)</h5>
                             <h6 class="card-subtitle mb-2 text-muted">Bintang Azhar Nafis - D25</h6>
                             <p class="card-text">
                             <ul>

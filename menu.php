@@ -19,6 +19,10 @@
     $humasJsonRead = file_get_contents('./assets/json/config_humas.json');
     $humasJsonDecode = json_decode($humasJsonRead, true);
 
+    if(isset($_POST['searchBox'])){
+        header("Location: ./search.php?s=".$_POST['searchBox']);
+    }
+
     if(isset($_POST['username'])) {
         $username = $_POST['username'];
         $password = $_POST['password'];
@@ -110,7 +114,7 @@
         </div>
 
         <div class="mini_text link_stylized">
-            <a href="./changelog.php">Version 1.1. Changelog</a>
+            <a href="./changelog.php">Version 1.1.1 Changelog</a>
         </div>
     </div>
 </div>

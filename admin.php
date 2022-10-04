@@ -62,9 +62,10 @@
                                 $phone = $_POST['phone'];
                                 $email = $_POST['email'];
                                 $bio = $_POST['bio'];
+                                $position = $_POST['jabatan'];
 
                                 if($_FILES['avatar']['name']==""){
-                                    $avatarDbUrl = $alumniRow['picture'];
+                                    $avatarDbUrl = 'no';
                                     echo "";
                                 }
                                 else {
@@ -83,8 +84,8 @@
                                 }
 
                                 if($connClass->opQuery(
-                                    "INSERT INTO alumni (name, alias, year_in, picture, prodi, company, phone, email, bio) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)",
-                                    [$name, $alias, $year_in, $avatarDbUrl, $prodi, $company, $phone, $email, $bio],
+                                    "INSERT INTO alumni (name, alias, year_in, picture, prodi, company, phone, email, bio, jabatan) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)",
+                                    [$name, $alias, $year_in, $avatarDbUrl, $prodi, $company, $phone, $email, $bio, $position],
                                     "0#0"
                                 )
                                 == true){
@@ -241,6 +242,11 @@
 
                                 <label class="form-label">Perusahaan tempat bekerja</label>
                                 <input type="text" class="form-control" id="company" name="company">
+
+                                <br/>
+
+                                <label class="form-label">Jabatan di Workshop Electro</label>
+                                <input type="text" class="form-control" id="jabatan" name="jabatan" placeholder="ex: Kepala Divisi Mekatronika">
 
                                 <br/>
 

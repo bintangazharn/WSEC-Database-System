@@ -62,6 +62,7 @@
                                     $alumniEmail = $alumniRow['email'];
                                     $alumniBio = $alumniRow['bio'];
                                     $alumniView = $alumniRow['view'];
+                                    $alumniPosition = $alumniRow['jabatan'];
 
                                     if(isset($alumniRow['picture'])){
                                         if($alumniRow['picture']!='no') {
@@ -84,6 +85,7 @@
                                         $phone = $_POST['phone'];
                                         $email = $_POST['email'];
                                         $bio = $_POST['bio'];
+                                        $position = $_POST['jabatan'];
 
                                         /*if(is_uploaded_file($_FILES['avatar']['name'])){
                                             $avatarExplode = explode(".", $_FILES['avatar']['name']);
@@ -124,8 +126,8 @@
                                         }
 
                                         if($connClass->opQuery(
-                                            "UPDATE alumni SET name = ?,  alias = ?, year_in = ?, picture = ?, prodi = ?, company = ?, phone = ?, email = ?, bio = ? WHERE id_alumni = ?",
-                                            [$name, $alias, $year_in, $avatarDbUrl, $prodi, $company, $phone, $email, $bio, $alumniId],
+                                            "UPDATE alumni SET name = ?,  alias = ?, year_in = ?, picture = ?, prodi = ?, company = ?, phone = ?, email = ?, bio = ?, jabatan = ? WHERE id_alumni = ?",
+                                            [$name, $alias, $year_in, $avatarDbUrl, $prodi, $company, $phone, $email, $bio, $position, $alumniId],
                                             "0#0"
                                         )
                                         == true){
@@ -164,7 +166,7 @@
                                         </div>
                     
                                         <div class="row details_wrapper">
-                                            <div class="col-md-3 col-sm-12">
+                                            <div class="col-md-3 col-sm-12 align-items-center">
                                                 <img src="'.$alumniPicture.'"/>
                                             </div>
                                             <div class="col-md-9 col-sm-12">
@@ -172,6 +174,7 @@
                                                     <li class="list-group-item">Nama: '.$alumniName.'</li>
                                                     <li class="list-group-item">Dinasty '.$alumniDinasty.' ('.$alumniYear.')</li>
                                                     <li class="list-group-item">Prodi: '.$alumniProdi.'</li>
+                                                    <li class="list-group-item">Jabatan: '.$alumniPosition.'</li>
                                                     <li class="list-group-item">Telepon: '.$alumniPhone.'</li>
                                                     <li class="list-group-item">Email: '.$alumniEmail.'</li>
                                                     <li class="list-group-item">Perusahaan: '.$alumniCompany.'</li>
@@ -244,6 +247,11 @@
                                     
                                                                     <label class="form-label">Perusahaan tempat bekerja</label>
                                                                     <input type="text" class="form-control" id="company" name="company" value="'.$alumniCompany.'">
+                                    
+                                                                    <br/>
+                                    
+                                                                    <label class="form-label">Jabatan di Workshop Electro</label>
+                                                                    <input type="text" class="form-control" id="jabatan" name="jabatan" value="'.$alumniPosition.'">
                                     
                                                                     <br/>
                                     

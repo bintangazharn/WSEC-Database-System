@@ -64,6 +64,20 @@ include "./menu.php";
                             </p>
                         </div>
                     </div>
+
+                    <br/>
+
+                    <div class="card mini_text">
+                        <div class="card-body">
+                            <h5 class="card-title">Version 1.1.2 (4/10/22)</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Bintang Azhar Nafis - D25</h6>
+                            <p class="card-text">
+                            <ul>
+                                <li>Add position row</li>
+                            </ul>
+                            </p>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-3 col-sm-12 right_container">
                     <div class="sidebar_header">

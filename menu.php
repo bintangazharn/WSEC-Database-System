@@ -114,7 +114,7 @@
         </div>
 
         <div class="mini_text link_stylized">
-            <a href="./changelog.php">Version 1.1.1 Changelog</a>
+            <a href="./changelog.php">Version 1.1.2 Changelog</a>
         </div>
     </div>
 </div>
